@@ -34,5 +34,11 @@
 -- select * from salaries
 -- where cast(salary as text) like '60%';
 
+-- SELECT * FROM salaries
+-- WHERE CAST(salary AS TEXT) LIKE '4_04%';
+
+-- select * from salaries
+-- where salary :: text like '_5_%';
+
 SELECT * FROM salaries
-WHERE CAST(salary AS TEXT) LIKE '4_04%';
+WHERE salary :: TEXT LIKE '8_%_0';
