@@ -9,9 +9,9 @@
 
 -- select * from students;
 
--- SELECT COALESCE(NAME, 'Unknonw') AS "Name_Filtered" FROM students;
+-- SELECT COALESCE(NAME, 'Unknown') AS "Name_Filtered" FROM students;
 
--- SELECT COALESCE(NAME, 'Unknonw') AS "Name_Filtered", lastname  FROM students;
+-- SELECT COALESCE(NAME, 'Unknown') AS "Name_Filtered", lastname  FROM students;
 
 -- SELECT sum(age) FROM students;
 
