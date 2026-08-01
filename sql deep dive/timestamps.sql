@@ -37,9 +37,13 @@ SHOW timezone;
 -- Both code do the same, but the below one is the shortform for it.
 
 INSERT INTO timezones VALUES(
+    TIMESTAMP WITHOUT TIME ZONE '2000-01-01 10:00:00-05',
+    TIMESTAMP WITH TIME ZONE '2000-01-01 10:00:00-05'
+);
+INSERT INTO timezones VALUES(
     TIMESTAMP WITHOUT TIME ZONE '2000-01-01 10:00:00 +05:30',
     TIMESTAMP WITH TIME ZONE '2000-01-01 10:00:00 +05:30'
-);    
+);
  
 -- INSERT INTO timezones VALUES(
 --     TIMESTAMP '2000-01-01 10:00:00 +05:30',
