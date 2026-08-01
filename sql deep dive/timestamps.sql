@@ -1,6 +1,8 @@
 -- Timestamps
 
-SELECT now();   -- Gives the current timestamp. 
+SHOW timezone;
+
+-- select now();   -- Gives the current timestamp. 
 
 -- Format:-     YYYY-MM-DD T HH:MM:SS:MS +- TZ
 -- Output:-     2026-08-01 16:28:42.260292 +05:30
@@ -18,15 +20,15 @@ SELECT now();   -- Gives the current timestamp.
 
 -- Both code do the same, but the below one is the shortform for it.
 
--- create table timezones (
---     ts timestamp without time zone,
---     tz timestamp with time zone
+-- CREATE TABLE timezones (
+--     ts TIMESTAMP WITHOUT TIME ZONE,
+--     tz TIMESTAMP WITH TIME ZONE
 -- );
 
-CREATE TABLE timezones (
-    ts TIMESTAMP,
-    tz timestamptz
-);
+-- CREATE TABLE timezones (
+--     ts TIMESTAMP,
+--     tz timestamptz
+-- );
 
 ----------------------------------------------------------------------------
 
@@ -34,15 +36,15 @@ CREATE TABLE timezones (
 
 -- Both code do the same, but the below one is the shortform for it.
 
--- insert into timezones VALUES(
---     timestamp without time zone '2000-01-01 10:00:00 +05:30',
---     TIMESTAMP WITH TIME ZONE '2000-01-01 10:00:00 +05:30'
--- );    
- 
 INSERT INTO timezones VALUES(
-    TIMESTAMP '2000-01-01 10:00:00 +05:30',
-    timestamptz '2000-01-01 10:00:00 +05:30'
-);   
+    TIMESTAMP WITHOUT TIME ZONE '2000-01-01 10:00:00 +05:30',
+    TIMESTAMP WITH TIME ZONE '2000-01-01 10:00:00 +05:30'
+);    
+ 
+-- INSERT INTO timezones VALUES(
+--     TIMESTAMP '2000-01-01 10:00:00 +05:30',
+--     timestamptz '2000-01-01 10:00:00 +05:30'
+-- );   
 
 ----------------------------------------------------------------------------
 
