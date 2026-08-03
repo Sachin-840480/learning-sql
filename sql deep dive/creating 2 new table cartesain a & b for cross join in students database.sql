@@ -1,11 +1,23 @@
 -- Creating 2 table cartesianA & cartesianB.
 
-CREATE TABLE cartesianA (id INT);
-CREATE TABLE cartesianB (id INT);
+-- drop table "cartesianA";
+-- drop table "cartesianB";
 
-INSERT INTO cartesianA VALUES(1);
-INSERT INTO cartesianA VALUES(2);
-INSERT INTO cartesianA VALUES(3);
+CREATE TABLE "cartesianA" (Aid INT);
+CREATE TABLE "cartesianB" (Bid INT);
 
-INSERT INTO cartesianB VALUES(1);
-INSERT INTO cartesianB VALUES(2);
+INSERT INTO "cartesianA" VALUES(1);
+INSERT INTO "cartesianA" VALUES(2);
+INSERT INTO "cartesianA" VALUES(3);
+
+INSERT INTO "cartesianB" VALUES(1);
+INSERT INTO "cartesianB" VALUES(2);
+
+
+-- Adding more data into tables for FULL OUTER JOIN.
+
+INSERT INTO "cartesianA" VALUES(4);
+INSERT INTO "cartesianA" VALUES(5);
+
+INSERT INTO "cartesianB" VALUES(20);
+INSERT INTO "cartesianB" VALUES(30);
