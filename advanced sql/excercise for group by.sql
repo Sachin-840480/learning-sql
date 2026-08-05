@@ -31,7 +31,8 @@
 -- join titles as t 
 -- on t.emp_no = e.emp_no
 -- where extract(year from e.hire_date) >= '1991'
--- group by e.emp_no;
+-- group by e.emp_no
+-- order by e.emp_no;
 
 ----------------------------------------------------------------------------
 
