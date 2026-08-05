@@ -3,6 +3,9 @@
 
 -- Getting the recent date a employee got a salary bump.
 
+-- select emp_no, salary, from_date
+-- from salaries;
+
 -- SELECT emp_no , salary FROM salaries
 -- GROUP BY emp_no, salary;
 
@@ -19,6 +22,9 @@
 -- group by emp_no;
 
 -- SELECT emp_no, from_date FROM salaries
+-- GROUP BY emp_no, from_date;
+
+-- SELECT emp_no, max(from_date) FROM salaries
 -- GROUP BY emp_no, from_date;
 
 
