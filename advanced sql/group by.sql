@@ -20,5 +20,5 @@
 
 -- Best
 
--- select dept_no, count(emp_no) from dept_emp
--- group by dept_no;
+SELECT dept_no, count(emp_no) FROM dept_emp
+GROUP BY dept_no;
