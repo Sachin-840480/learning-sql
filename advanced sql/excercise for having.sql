@@ -56,6 +56,10 @@ ORDER BY e.emp_no;
 
 ----------------------------------------------------------------------------
 
+-- If I want to display multiple values (e.g., all department names) in one grouped row, I need an aggregate that combines values (such as STRING_AGG()). Until then, I cannot correctly show all department names without changing the grouping.
+
+----------------------------------------------------------------------------
+
 -- If you want the department names too...
 
 -- You can't simply add dept_name to the SELECT list because an employee may have multiple department names.
