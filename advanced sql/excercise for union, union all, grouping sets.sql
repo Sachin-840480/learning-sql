@@ -19,6 +19,17 @@ GROUPING SETS(
 )
 ORDER BY dept_no DESC;
 
+-- ZTM Answer:
+
+SELECT GROUPING(e.dept_no), e.dept_no, COUNT(e.emp_no)
+FROM public.dept_emp AS e
+GROUP BY
+	GROUPING SETS (
+		(e.dept_no),
+     		()
+	)
+ORDER BY e.dept_no;
+
 ----------------------------------------------------------------------------
 
 -- Question 2:``
@@ -32,3 +43,15 @@ GROUPING SETS(
     (dept_no)
 )
 ORDER BY dept_no DESC;
+
+-- ZTM Answer:
+
+SELECT GROUPING(de.dept_no), de.dept_no, AVG(e.salary)
+FROM public.salaries AS e
+JOIN public.dept_emp AS de USING (emp_no)
+GROUP BY
+	GROUPING SETS (
+		(de.dept_no),
+     	()
+	)
+ORDER BY de.dept_no;
