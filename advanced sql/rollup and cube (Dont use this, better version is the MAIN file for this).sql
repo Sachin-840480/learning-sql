@@ -35,7 +35,7 @@ ORDER BY
 ----------------------------------------------------------------------------
 
 -- Rollup combines all this process into a simple line.
--- It goes sequentially (ABC) -> (A)+(AB)+(ABC)
+-- It goes sequentially (ABC) -> (ABC)+(AB)+(A)+()
 
 SELECT  EXTRACT(YEAR FROM orderdate) AS "year",
         EXTRACT(MONTH FROM orderdate) AS "month",

@@ -1,6 +1,6 @@
 -- Creating a Table to understand Grouping sets, Rollups, Cube.
 
-CREATE TABLE sales_demo (
+CREATE TABLE orders (
     id INT PRIMARY KEY,
     continent VARCHAR(30),
     country VARCHAR(30),
