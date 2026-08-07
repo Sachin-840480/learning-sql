@@ -40,3 +40,7 @@ GROUP BY emp_no;
 -- SELECT emp_no, max(from_date), max(salary) FROM salaries
 -- GROUP BY emp_no
 -- having max(from_date);
+
+----------------------------------------------------------------------------
+-- UPDATE:- See the Window Function.SQL to see the working of the above Query.
+----------------------------------------------------------------------------
