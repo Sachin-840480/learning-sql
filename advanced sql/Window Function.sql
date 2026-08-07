@@ -30,4 +30,4 @@ max(salary) OVER ()
 FROM salaries
 WHERE salary < 70000;
 
--- the window of data refers to data that the Querrey calculated out, not what limit cuts off.
+-- the window of data refers to data that the Querey calculated out, not what limit cuts off.
