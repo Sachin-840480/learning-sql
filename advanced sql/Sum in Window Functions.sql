@@ -14,7 +14,7 @@
 -- SELECT customerid, sum(totalamount) FROM orders
 -- GROUP BY customerid
 -- ORDER BY customerid;
--- 
+
 ----------------------------------------------------------------------------
 
 -- Solution:-
