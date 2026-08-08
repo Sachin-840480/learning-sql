@@ -42,5 +42,5 @@ GROUP BY emp_no;
 -- having max(from_date);
 
 ----------------------------------------------------------------------------
--- UPDATE:- See the Window Function.SQL to see the working of the above Query.
+-- UPDATE:- See the "Solving the current salary problem (from Group by mental model).SQL" to see the working of the above Query.
 ----------------------------------------------------------------------------

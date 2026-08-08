@@ -107,9 +107,7 @@ SELECT emp_no,
     )
 FROM salaries;
 
-
 ----------------------------------------------------------------------------
-
 
 -- It gives the same effect as "order by" wihtout having to use "order_by". (IT DOES NOTHING, BUT Changing it to "ROWS do it.)
 

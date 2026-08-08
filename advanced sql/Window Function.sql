@@ -7,6 +7,8 @@
 -- group by emp_no;
 
 ----------------------------------------------------------------------------
+-- UPDATE:- See the "Solving the current salary problem (from Group by mental model).SQL" to see the working of the above Query.
+----------------------------------------------------------------------------
 
 -- Working version for getting the max salary and max date.
 
