@@ -38,4 +38,31 @@ SELECT
   DISTINCT continent,
   SUM(population) OVER w1 AS"continent population"
 FROM country 
-WINDOW w1 AS( PARTITION BY continent );
+WINDOW w1 AS( PARTITION BY continent);
+
+----------------------------------------------------------------------------
+
+-- Not useful. (Causes more rows to show rather than only 7)
+
+-- SELECT continent, name, population,
+--     sum(population) OVER (
+--         PARTITION BY continent
+--         order by name
+--     ) AS "Population per Continent"
+-- FROM country
+-- order by continent, name;
+
+----------------------------------------------------------------------------
+
+-- Question 2:
+
+
+
+----------------------------------------------------------------------------
+
+-- Question 3:
+
+
+
+
+
