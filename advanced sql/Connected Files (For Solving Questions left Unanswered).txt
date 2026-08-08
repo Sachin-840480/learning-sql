@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------
+Connections: All the files left unsolved are connected through here and are being Observed from here.
+----------------------------------------------------------------------------
+
+
+1. "group by mental model.sql --> Solving the current salary problem (from Group by mental model).sql"
+
+We tried to solve a problem in the "group by mental model.sql" (last example).
+But it was still unfinished and didn't produced an output.
+
+Question: Getting the recent date a employee got a salary bump.
+
+UPDATE:- See the "Solving the current salary problem (from Group by mental model).SQL" to see the working of the above Query.
+
+
+----------------------------------------------------------------------------
+
+
+2. {None Here till now, Which is better} - XD 
