@@ -26,19 +26,19 @@
 
 -- My Answer: Works Perfectly Fine.
 
-SELECT DISTINCT continent,
-    sum(population) OVER (
-        PARTITION BY continent
-    ) AS "Population per Continent"
-FROM country;
+-- SELECT DISTINCT continent,
+--     sum(population) OVER (
+--         PARTITION BY continent
+--     ) AS "Population per Continent"
+-- FROM country;
 
 -- ZTM Answer:
 
-SELECT
-  DISTINCT continent,
-  SUM(population) OVER w1 AS"continent population"
-FROM country 
-WINDOW w1 AS( PARTITION BY continent);
+-- SELECT
+--   DISTINCT continent,
+--   SUM(population) OVER w1 AS "continent population"
+-- FROM country 
+-- WINDOW w1 AS( PARTITION BY continent);
 
 ----------------------------------------------------------------------------
 
@@ -56,6 +56,55 @@ WINDOW w1 AS( PARTITION BY continent);
 
 -- Question 2:
 
+-- My Answer: Works but it's mdae pretty below.
+
+SELECT DISTINCT continent,
+    sum(population) OVER (
+        PARTITION BY continent
+    ) AS "Population per Continent", 
+    
+    round(sum(population :: float4) OVER (
+        PARTITION BY continent
+    ) 
+        / sum(population :: float4) OVER () * 100
+    )
+    AS "Percentage of population %"
+    
+FROM country;
+
+
+-- Mine made pretty.
+
+SELECT DISTINCT continent,
+    sum(population) OVER (
+        PARTITION BY continent
+    ) AS "Population per Continent", 
+    concat
+        (round
+            (sum(population :: float4) OVER (
+                PARTITION BY continent
+            ) 
+            / sum(population :: float4) OVER () * 100
+        ), '%'
+    )
+    AS "Percentage of population %"
+FROM country;
+
+
+-- ZTM Answer: (Much Easier to see and understand.)
+
+SELECT
+  DISTINCT continent,
+  SUM(population) OVER w1 AS"continent population",
+  CONCAT( 
+      ROUND( 
+          ( 
+            SUM( population::float4 ) OVER w1 / 
+            SUM( population::float4 ) OVER() 
+          ) * 100    
+      ),'%' ) AS "percentage of population"
+FROM country 
+WINDOW w1 AS( PARTITION BY continent );
 
 
 ----------------------------------------------------------------------------
