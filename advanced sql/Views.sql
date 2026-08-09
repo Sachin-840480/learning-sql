@@ -62,7 +62,7 @@
 -- Creating a View Named "last_salary_change"
 
 -- CREATE VIEW last_salary_change as 
--- select  emp_no, max(from_date)
+-- select emp_no, max(from_date)
 -- from salaries
 -- group by emp_no
 -- order by emp_no;
