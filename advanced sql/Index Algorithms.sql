@@ -64,6 +64,6 @@
 
 -- FIX: used "OR".
 
--- EXPLAIN ANALYZE
--- SELECT NAME, district, countrycode FROM city
--- WHERE countrycode = 'TUN' or countrycode = 'BEL' or countrycode = 'NLD';
+EXPLAIN ANALYZE
+SELECT NAME, district, countrycode FROM city
+WHERE countrycode = 'TUN' OR countrycode = 'BEL' OR countrycode = 'NLD';
