@@ -52,9 +52,17 @@
 
 -- Changing the Query to better Suit Hash Algorithms.   (0.014ms)
 
+--------------------------------------
+
+-- It is not correct. (because of "AND" being used instead of "OR".)
+
 -- EXPLAIN ANALYZE
 -- SELECT NAME, district, countrycode FROM city
 -- WHERE countrycode = 'TUN' and countrycode = 'BEL' and countrycode = 'NLD';
+
+--------------------------------------
+
+-- FIX: used "OR".
 
 -- EXPLAIN ANALYZE
 -- SELECT NAME, district, countrycode FROM city
