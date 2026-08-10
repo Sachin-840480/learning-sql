@@ -16,7 +16,7 @@
 
 -- explain ANALYZE
 -- select name, district, countrycode from city
--- WHERE countrycode in ('TUN','BEL','NL');
+-- WHERE countrycode in ('TUN','BEL','NLD');
 
 ----------------------------------------------------------------------------
 
@@ -29,16 +29,16 @@
 
 -- Re-running the same Query to see the difference in runtime.
 
-EXPLAIN ANALYZE
+-- EXPLAIN ANALYZE
 SELECT NAME, district, countrycode FROM city
-WHERE countrycode IN ('TUN','BEL','NL');
+WHERE countrycode IN ('TUN','BEL','NLD');
 
 ----------------------------------------------------------------------------
 
 -- Creating a Partial Index:
 
 -- create index idx_countrycode
--- on city (countrycode) WHERE countrycode in ('TUN','BEL','NL');
+-- on city (countrycode) WHERE countrycode in ('TUN','BEL','NLD');
 
 ----------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ WHERE countrycode IN ('TUN','BEL','NL');
 
 EXPLAIN ANALYZE
 SELECT NAME, district, countrycode FROM city
-WHERE countrycode IN ('TUN','BEL','NL');
+WHERE countrycode IN ('TUN','BEL','NLD');
 
 -- Trying to Retrive, data outside of index.
 
