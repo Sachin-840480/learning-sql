@@ -38,7 +38,7 @@
 
 SELECT emp_no, salary, from_date,
     (SELECT title FROM titles AS t 
-        WHERE s.emp_no = t.emp_no       -- Referencing Outside -> Coreelated SubQuery.
+        WHERE t.emp_no = s.emp_no       -- Referencing Outside -> Coreelated SubQuery.
             AND (t.from_date = s.from_date OR t.from_date = s.from_date + INTERVAL '2 Days')
 )
 FROM salaries AS s
@@ -51,7 +51,7 @@ ORDER BY emp_no;
 -- select s.emp_no, s.salary, s.from_date, t.title
 -- from salaries as s
 -- left outer join titles as t on t.emp_no = s.emp_no
---     AND (s.from_date = t.from_date OR t.from_date = s.from_date + INTERVAL '2 Days')
+--     AND (t.from_date = s.from_date OR t.from_date = s.from_date + INTERVAL '2 Days')
 -- order by s.emp_no;
 
 --------------------------------------
@@ -61,5 +61,5 @@ ORDER BY emp_no;
 -- SELECT s.emp_no, s.salary, s.from_date, t.title
 -- FROM salaries AS s
 -- JOIN titles AS t ON t.emp_no = s.emp_no
---     AND (s.from_date = t.from_date OR t.from_date = s.from_date + INTERVAL '2 Days')
+--     AND (t.from_date = s.from_date OR t.from_date = s.from_date + INTERVAL '2 Days')
 -- ORDER BY emp_no;
