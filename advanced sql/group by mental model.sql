@@ -43,5 +43,8 @@ GROUP BY emp_no;
 
 ----------------------------------------------------------------------------
 -- UPDATE:- See the "Views.SQL" to see the working of the above Query.
+-- UPDATE 2: See the "(Sub Queries) Solving the latest salary problem (from group by mental model)" to see another working of the above Query.
+
+-- Basic Version: See the "Window Functions" for a minor try.
 -- Earlier Versions: Solving the current salary problem (from Group by mental model).sql
 ----------------------------------------------------------------------------

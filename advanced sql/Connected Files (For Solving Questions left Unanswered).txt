@@ -24,3 +24,19 @@ But it was still unfinished and didn't produced an output.
 Question: Getting the recent date a employee got a salary bump.
 
 UPDATE:- See the "views.SQL" to see the working of the above Query. {THE Best Answer}
+
+
+----------------------------------------------------------------------------
+
+
+3. "group by mental model.sql --> (Sub Queries) Solving the latest salary problem (from group by mental model).sql"
+
+We tried to solve a problem in the "group by mental model.sql" (last example).
+But it was still unfinished and didn't produced an output.
+
+Question: Getting the recent date a employee got a salary bump.
+
+UPDATE:- See the "(Sub Queries) Solving the latest salary problem (from group by mental model).SQL" to see the working of the above Query. {THE 2nd Best Answer}
+
+
+----------------------------------------------------------------------------
