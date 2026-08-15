@@ -17,8 +17,8 @@
 -- get vehicle_id, owner name, address, status, current_location for the values taken from the above.
 
 SELECT DISTINCT r.vehicle_id, u.name AS "owner name", u.address, v.status, v.current_location 
-FROM rides AS r
-JOIN suspected_rides AS sr ON sr.ride_id = r.id
+FROM suspected_rides AS sr
+JOIN rides AS r ON r.id = sr.ride_id
 JOIN vehicles AS v ON v.id = r.vehicle_id
 JOIN users AS u ON u.id = v.owner_id
 ORDER BY "owner name";
